@@ -1,0 +1,9 @@
+#cloud-config
+hostname: ${NODE_NAME}
+fqdn: ${NODE_NAME}.local
+users:
+  - name: scall
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - "${SCALL_LAB_SSH_KEY}"
