@@ -59,7 +59,7 @@ envsubst < "$TEMPLATE" | $SUDO tee "$INSTALL_DIR/cloud-config_${NODE}.yml" > /de
 $SUDO virt-install \
     --connect qemu:///system \
     --name "$NODE" \
-    --memory 4096 \
+    --memory 8192 \
     --vcpus 4 \
     --os-variant almalinux10 \
     --cpu host-passthrough \
